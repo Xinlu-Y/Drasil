@@ -47,7 +47,7 @@ mkDirections handle ls = do
        -- Creates an edge between a type and its dependency (indented for subgraphs)
         makeEdgesSub :: String -> [String] -> [String]
         makeEdgesSub _ [] = []
-        makeEdgesSub nm (c:cs) = ("\t" ++ filterInvalidChars nm ++ " -> " ++ filterInvalidChars c ++ ";"): makeEdgesSub nm cs
+        makeEdgesSub nm (c:cs) = ("\t\"" ++ filterInvalidChars nm ++ "\" -> \"" ++ filterInvalidChars c ++ "\";"): makeEdgesSub nm cs
 
 -- | Prints graph nodes (labels) onto a given file handle.
 mkNodes :: Handle -> NodeFamily -> IO ()
@@ -57,7 +57,7 @@ mkNodes handle NF{nodeUIDs = u, nodeLabels = ls, nfLabel = lbl, nfColour = col} 
     where
         -- Creates a node based on the kind of datatype (indented for subgraphs)
         makeNodesSub :: Colour -> String -> String -> String
-        makeNodesSub c l nm  = "\t" ++ filterInvalidChars nm ++ "\t[shape=box, color=black, style=filled, fillcolor=" ++ c ++ ", label=\"" ++ l ++ "\"];"
+        makeNodesSub c l nm  = "\t\"" ++ filterInvalidChars nm ++ "\"\t[shape=box, color=black, style=filled, fillcolor=" ++ c ++ ", label=\"" ++ l ++ "\"];"
 
 -- | Helper that only makes a subgraph if there are elements in the subgraph. Otherwise, it returns nothing.
 mkSubgraph :: Handle -> Label -> [UID] -> IO ()
@@ -66,7 +66,7 @@ mkSubgraph handle l u
     | otherwise = do
              hPutStrLn handle $ "\n\tsubgraph " ++ l ++ " {"
              hPutStrLn handle "\trank=\"same\""
-             hPutStrLn handle $ "\t{" ++ intercalate ", " (map (filterInvalidChars . show) u) ++ "}"
+             hPutStrLn handle $ "\t{" ++ intercalate ", " (map (\x -> "\"" ++ filterInvalidChars (show x) ++ "\"") u) ++ "}"
              hPutStrLn handle "\t}\n"
 
 -- | Gets graph labels.

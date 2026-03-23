@@ -1,0 +1,8 @@
+Original,Copy
+../../../../datafiles/bss/bss.png,src/assets/bss.png
+../../../../datafiles/bss/SystemContextFigure.png,src/assets/SystemContextFigure.png
+../../../../traceygraphs/bss/avsa.svg,src/assets/avsa.svg
+../../../../traceygraphs/bss/avsall.svg,src/assets/avsall.svg
+../../../../traceygraphs/bss/refvsref.svg,src/assets/refvsref.svg
+../../../../traceygraphs/bss/allvsr.svg,src/assets/allvsr.svg
+../../../../traceygraphs/bss/allvsall.svg,src/assets/allvsall.svg

@@ -32,7 +32,7 @@ jobs:
           mkdir -p _site
           cp -r code/stable _site/stable
           cp -r code/datafiles _site/datafiles
-          cp -r code/traceygraphs _site/traceygraphs
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

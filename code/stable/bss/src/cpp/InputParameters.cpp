@@ -11,7 +11,7 @@
 using std::ifstream;
 using std::string;
 
-void get_input(string filename, double &m_1, double &m_2, double &x_1^0, double &y_1^0, double &x_2^0, double &y_2^0, double &v_x1^0, double &v_y1^0, double &v_x2^0, double &v_y2^0, double &t_final) {
+void get_input(string filename, double &m_1, double &m_2, double &x_1_0, double &y_1_0, double &x_2_0, double &y_2_0, double &v_x1_0, double &v_y1_0, double &v_x2_0, double &v_y2_0, double &t_final) {
     ifstream infile;
     infile.open(filename, std::fstream::in);
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -21,28 +21,28 @@ void get_input(string filename, double &m_1, double &m_2, double &x_1^0, double 
     infile >> m_2;
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    infile >> x_1^0;
+    infile >> x_1_0;
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    infile >> y_1^0;
+    infile >> y_1_0;
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    infile >> x_2^0;
+    infile >> x_2_0;
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    infile >> y_2^0;
+    infile >> y_2_0;
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    infile >> v_x1^0;
+    infile >> v_x1_0;
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    infile >> v_y1^0;
+    infile >> v_y1_0;
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    infile >> v_x2^0;
+    infile >> v_x2_0;
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    infile >> v_y2^0;
+    infile >> v_y2_0;
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     infile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     infile >> t_final;
@@ -50,7 +50,7 @@ void get_input(string filename, double &m_1, double &m_2, double &x_1^0, double 
     infile.close();
 }
 
-void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, double x_2^0, double y_2^0, double v_x1^0, double v_y1^0, double v_x2^0, double v_y2^0, double t_final) {
+void input_constraints(double m_1, double m_2, double x_1_0, double y_1_0, double x_2_0, double y_2_0, double v_x1_0, double v_y1_0, double v_x2_0, double v_y2_0, double t_final) {
     if (!(Constants::m_min <= m_1 && m_1 <= Constants::m_max)) {
         std::cout << "Warning: ";
         std::cout << "m_1 has value ";
@@ -77,10 +77,10 @@ void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, doubl
         std::cout << " (m_max)";
         std::cout << "." << std::endl;
     }
-    if (!(-Constants::r_max <= x_1^0 && x_1^0 <= Constants::r_max)) {
+    if (!(-Constants::r_max <= x_1_0 && x_1_0 <= Constants::r_max)) {
         std::cout << "Warning: ";
-        std::cout << "x_1^0 has value ";
-        std::cout << x_1^0;
+        std::cout << "x_1_0 has value ";
+        std::cout << x_1_0;
         std::cout << ", but is suggested to be ";
         std::cout << "between ";
         std::cout << -Constants::r_max;
@@ -90,10 +90,10 @@ void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, doubl
         std::cout << " (r_max)";
         std::cout << "." << std::endl;
     }
-    if (!(-Constants::r_max <= y_1^0 && y_1^0 <= Constants::r_max)) {
+    if (!(-Constants::r_max <= y_1_0 && y_1_0 <= Constants::r_max)) {
         std::cout << "Warning: ";
-        std::cout << "y_1^0 has value ";
-        std::cout << y_1^0;
+        std::cout << "y_1_0 has value ";
+        std::cout << y_1_0;
         std::cout << ", but is suggested to be ";
         std::cout << "between ";
         std::cout << -Constants::r_max;
@@ -103,10 +103,10 @@ void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, doubl
         std::cout << " (r_max)";
         std::cout << "." << std::endl;
     }
-    if (!(-Constants::r_max <= x_2^0 && x_2^0 <= Constants::r_max)) {
+    if (!(-Constants::r_max <= x_2_0 && x_2_0 <= Constants::r_max)) {
         std::cout << "Warning: ";
-        std::cout << "x_2^0 has value ";
-        std::cout << x_2^0;
+        std::cout << "x_2_0 has value ";
+        std::cout << x_2_0;
         std::cout << ", but is suggested to be ";
         std::cout << "between ";
         std::cout << -Constants::r_max;
@@ -116,10 +116,10 @@ void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, doubl
         std::cout << " (r_max)";
         std::cout << "." << std::endl;
     }
-    if (!(-Constants::r_max <= y_2^0 && y_2^0 <= Constants::r_max)) {
+    if (!(-Constants::r_max <= y_2_0 && y_2_0 <= Constants::r_max)) {
         std::cout << "Warning: ";
-        std::cout << "y_2^0 has value ";
-        std::cout << y_2^0;
+        std::cout << "y_2_0 has value ";
+        std::cout << y_2_0;
         std::cout << ", but is suggested to be ";
         std::cout << "between ";
         std::cout << -Constants::r_max;
@@ -129,10 +129,10 @@ void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, doubl
         std::cout << " (r_max)";
         std::cout << "." << std::endl;
     }
-    if (!(-Constants::v_max <= v_x1^0 && v_x1^0 <= Constants::v_max)) {
+    if (!(-Constants::v_max <= v_x1_0 && v_x1_0 <= Constants::v_max)) {
         std::cout << "Warning: ";
-        std::cout << "v_x1^0 has value ";
-        std::cout << v_x1^0;
+        std::cout << "v_x1_0 has value ";
+        std::cout << v_x1_0;
         std::cout << ", but is suggested to be ";
         std::cout << "between ";
         std::cout << -Constants::v_max;
@@ -142,10 +142,10 @@ void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, doubl
         std::cout << " (v_max)";
         std::cout << "." << std::endl;
     }
-    if (!(-Constants::v_max <= v_y1^0 && v_y1^0 <= Constants::v_max)) {
+    if (!(-Constants::v_max <= v_y1_0 && v_y1_0 <= Constants::v_max)) {
         std::cout << "Warning: ";
-        std::cout << "v_y1^0 has value ";
-        std::cout << v_y1^0;
+        std::cout << "v_y1_0 has value ";
+        std::cout << v_y1_0;
         std::cout << ", but is suggested to be ";
         std::cout << "between ";
         std::cout << -Constants::v_max;
@@ -155,10 +155,10 @@ void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, doubl
         std::cout << " (v_max)";
         std::cout << "." << std::endl;
     }
-    if (!(-Constants::v_max <= v_x2^0 && v_x2^0 <= Constants::v_max)) {
+    if (!(-Constants::v_max <= v_x2_0 && v_x2_0 <= Constants::v_max)) {
         std::cout << "Warning: ";
-        std::cout << "v_x2^0 has value ";
-        std::cout << v_x2^0;
+        std::cout << "v_x2_0 has value ";
+        std::cout << v_x2_0;
         std::cout << ", but is suggested to be ";
         std::cout << "between ";
         std::cout << -Constants::v_max;
@@ -168,10 +168,10 @@ void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, doubl
         std::cout << " (v_max)";
         std::cout << "." << std::endl;
     }
-    if (!(-Constants::v_max <= v_y2^0 && v_y2^0 <= Constants::v_max)) {
+    if (!(-Constants::v_max <= v_y2_0 && v_y2_0 <= Constants::v_max)) {
         std::cout << "Warning: ";
-        std::cout << "v_y2^0 has value ";
-        std::cout << v_y2^0;
+        std::cout << "v_y2_0 has value ";
+        std::cout << v_y2_0;
         std::cout << ", but is suggested to be ";
         std::cout << "between ";
         std::cout << -Constants::v_max;

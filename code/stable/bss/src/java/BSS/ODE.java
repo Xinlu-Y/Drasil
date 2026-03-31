@@ -13,40 +13,40 @@ import org.apache.commons.math3.ode.FirstOrderDifferentialEquations;
 public class ODE implements FirstOrderDifferentialEquations {
     private double m_1;
     private double m_2;
-    private double x_1^0;
-    private double y_1^0;
-    private double x_2^0;
-    private double y_2^0;
-    private double v_x1^0;
-    private double v_y1^0;
-    private double v_x2^0;
-    private double v_y2^0;
+    private double x_1_0;
+    private double y_1_0;
+    private double x_2_0;
+    private double y_2_0;
+    private double v_x1_0;
+    private double v_y1_0;
+    private double v_x2_0;
+    private double v_y2_0;
     private double t_final;
     
     /** \brief Constructor for ODE objects
         \param m_1 mass of the first star (kg)
         \param m_2 mass of the second star (kg)
-        \param x_1^0 initial x-position of the first star (m)
-        \param y_1^0 initial y-position of the first star (m)
-        \param x_2^0 initial x-position of the second star (m)
-        \param y_2^0 initial y-position of the second star (m)
-        \param v_x1^0 initial x-velocity of the first star (m/s)
-        \param v_y1^0 initial y-velocity of the first star (m/s)
-        \param v_x2^0 initial x-velocity of the second star (m/s)
-        \param v_y2^0 initial y-velocity of the second star (m/s)
+        \param x_1_0 initial x-position of the first star (m)
+        \param y_1_0 initial y-position of the first star (m)
+        \param x_2_0 initial x-position of the second star (m)
+        \param y_2_0 initial y-position of the second star (m)
+        \param v_x1_0 initial x-velocity of the first star (m/s)
+        \param v_y1_0 initial y-velocity of the first star (m/s)
+        \param v_x2_0 initial x-velocity of the second star (m/s)
+        \param v_y2_0 initial y-velocity of the second star (m/s)
         \param t_final final time (s)
     */
-    public ODE(double m_1, double m_2, double x_1^0, double y_1^0, double x_2^0, double y_2^0, double v_x1^0, double v_y1^0, double v_x2^0, double v_y2^0, double t_final) {
+    public ODE(double m_1, double m_2, double x_1_0, double y_1_0, double x_2_0, double y_2_0, double v_x1_0, double v_y1_0, double v_x2_0, double v_y2_0, double t_final) {
         this.m_1 = m_1;
         this.m_2 = m_2;
-        this.x_1^0 = x_1^0;
-        this.y_1^0 = y_1^0;
-        this.x_2^0 = x_2^0;
-        this.y_2^0 = y_2^0;
-        this.v_x1^0 = v_x1^0;
-        this.v_y1^0 = v_y1^0;
-        this.v_x2^0 = v_x2^0;
-        this.v_y2^0 = v_y2^0;
+        this.x_1_0 = x_1_0;
+        this.y_1_0 = y_1_0;
+        this.x_2_0 = x_2_0;
+        this.y_2_0 = y_2_0;
+        this.v_x1_0 = v_x1_0;
+        this.v_y1_0 = v_y1_0;
+        this.v_x2_0 = v_x2_0;
+        this.v_y2_0 = v_y2_0;
         this.t_final = t_final;
     }
     

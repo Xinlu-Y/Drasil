@@ -17,7 +17,7 @@ public class OutputFormat {
     /** \brief Writes the output values to output.txt
         \param q dependent variables (m)
     */
-    public static void write_output(ArrayList<Double> q) throws IOException {
+    public static void write_output(ArrayList<ArrayList<Double>> q) throws IOException {
         PrintWriter outputfile;
         outputfile = new PrintWriter(new FileWriter(new File("output.txt"), false));
         outputfile.print("q = ");

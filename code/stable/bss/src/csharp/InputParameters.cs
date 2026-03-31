@@ -13,17 +13,17 @@ public class InputParameters {
         \param filename name of the input file
         \param m_1 mass of the first star (kg)
         \param m_2 mass of the second star (kg)
-        \param x_1^0 initial x-position of the first star (m)
-        \param y_1^0 initial y-position of the first star (m)
-        \param x_2^0 initial x-position of the second star (m)
-        \param y_2^0 initial y-position of the second star (m)
-        \param v_x1^0 initial x-velocity of the first star (m/s)
-        \param v_y1^0 initial y-velocity of the first star (m/s)
-        \param v_x2^0 initial x-velocity of the second star (m/s)
-        \param v_y2^0 initial y-velocity of the second star (m/s)
+        \param x_1_0 initial x-position of the first star (m)
+        \param y_1_0 initial y-position of the first star (m)
+        \param x_2_0 initial x-position of the second star (m)
+        \param y_2_0 initial y-position of the second star (m)
+        \param v_x1_0 initial x-velocity of the first star (m/s)
+        \param v_y1_0 initial y-velocity of the first star (m/s)
+        \param v_x2_0 initial x-velocity of the second star (m/s)
+        \param v_y2_0 initial y-velocity of the second star (m/s)
         \param t_final final time (s)
     */
-    public static void get_input(string filename, out double m_1, out double m_2, out double x_1^0, out double y_1^0, out double x_2^0, out double y_2^0, out double v_x1^0, out double v_y1^0, out double v_x2^0, out double v_y2^0, out double t_final) {
+    public static void get_input(string filename, out double m_1, out double m_2, out double x_1_0, out double y_1_0, out double x_2_0, out double y_2_0, out double v_x1_0, out double v_y1_0, out double v_x2_0, out double v_y2_0, out double t_final) {
         StreamReader infile;
         infile = new StreamReader(filename);
         infile.ReadLine();
@@ -31,21 +31,21 @@ public class InputParameters {
         infile.ReadLine();
         m_2 = Double.Parse(infile.ReadLine());
         infile.ReadLine();
-        x_1^0 = Double.Parse(infile.ReadLine());
+        x_1_0 = Double.Parse(infile.ReadLine());
         infile.ReadLine();
-        y_1^0 = Double.Parse(infile.ReadLine());
+        y_1_0 = Double.Parse(infile.ReadLine());
         infile.ReadLine();
-        x_2^0 = Double.Parse(infile.ReadLine());
+        x_2_0 = Double.Parse(infile.ReadLine());
         infile.ReadLine();
-        y_2^0 = Double.Parse(infile.ReadLine());
+        y_2_0 = Double.Parse(infile.ReadLine());
         infile.ReadLine();
-        v_x1^0 = Double.Parse(infile.ReadLine());
+        v_x1_0 = Double.Parse(infile.ReadLine());
         infile.ReadLine();
-        v_y1^0 = Double.Parse(infile.ReadLine());
+        v_y1_0 = Double.Parse(infile.ReadLine());
         infile.ReadLine();
-        v_x2^0 = Double.Parse(infile.ReadLine());
+        v_x2_0 = Double.Parse(infile.ReadLine());
         infile.ReadLine();
-        v_y2^0 = Double.Parse(infile.ReadLine());
+        v_y2_0 = Double.Parse(infile.ReadLine());
         infile.ReadLine();
         t_final = Double.Parse(infile.ReadLine());
         infile.Close();
@@ -54,17 +54,17 @@ public class InputParameters {
     /** \brief Verifies that input values satisfy the physical constraints and software constraints
         \param m_1 mass of the first star (kg)
         \param m_2 mass of the second star (kg)
-        \param x_1^0 initial x-position of the first star (m)
-        \param y_1^0 initial y-position of the first star (m)
-        \param x_2^0 initial x-position of the second star (m)
-        \param y_2^0 initial y-position of the second star (m)
-        \param v_x1^0 initial x-velocity of the first star (m/s)
-        \param v_y1^0 initial y-velocity of the first star (m/s)
-        \param v_x2^0 initial x-velocity of the second star (m/s)
-        \param v_y2^0 initial y-velocity of the second star (m/s)
+        \param x_1_0 initial x-position of the first star (m)
+        \param y_1_0 initial y-position of the first star (m)
+        \param x_2_0 initial x-position of the second star (m)
+        \param y_2_0 initial y-position of the second star (m)
+        \param v_x1_0 initial x-velocity of the first star (m/s)
+        \param v_y1_0 initial y-velocity of the first star (m/s)
+        \param v_x2_0 initial x-velocity of the second star (m/s)
+        \param v_y2_0 initial y-velocity of the second star (m/s)
         \param t_final final time (s)
     */
-    public static void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, double x_2^0, double y_2^0, double v_x1^0, double v_y1^0, double v_x2^0, double v_y2^0, double t_final) {
+    public static void input_constraints(double m_1, double m_2, double x_1_0, double y_1_0, double x_2_0, double y_2_0, double v_x1_0, double v_y1_0, double v_x2_0, double v_y2_0, double t_final) {
         if (!(Constants.m_min <= m_1 && m_1 <= Constants.m_max)) {
             Console.Write("Warning: ");
             Console.Write("m_1 has value ");
@@ -91,10 +91,10 @@ public class InputParameters {
             Console.Write(" (m_max)");
             Console.WriteLine(".");
         }
-        if (!(-Constants.r_max <= x_1^0 && x_1^0 <= Constants.r_max)) {
+        if (!(-Constants.r_max <= x_1_0 && x_1_0 <= Constants.r_max)) {
             Console.Write("Warning: ");
-            Console.Write("x_1^0 has value ");
-            Console.Write(x_1^0);
+            Console.Write("x_1_0 has value ");
+            Console.Write(x_1_0);
             Console.Write(", but is suggested to be ");
             Console.Write("between ");
             Console.Write(-Constants.r_max);
@@ -104,10 +104,10 @@ public class InputParameters {
             Console.Write(" (r_max)");
             Console.WriteLine(".");
         }
-        if (!(-Constants.r_max <= y_1^0 && y_1^0 <= Constants.r_max)) {
+        if (!(-Constants.r_max <= y_1_0 && y_1_0 <= Constants.r_max)) {
             Console.Write("Warning: ");
-            Console.Write("y_1^0 has value ");
-            Console.Write(y_1^0);
+            Console.Write("y_1_0 has value ");
+            Console.Write(y_1_0);
             Console.Write(", but is suggested to be ");
             Console.Write("between ");
             Console.Write(-Constants.r_max);
@@ -117,10 +117,10 @@ public class InputParameters {
             Console.Write(" (r_max)");
             Console.WriteLine(".");
         }
-        if (!(-Constants.r_max <= x_2^0 && x_2^0 <= Constants.r_max)) {
+        if (!(-Constants.r_max <= x_2_0 && x_2_0 <= Constants.r_max)) {
             Console.Write("Warning: ");
-            Console.Write("x_2^0 has value ");
-            Console.Write(x_2^0);
+            Console.Write("x_2_0 has value ");
+            Console.Write(x_2_0);
             Console.Write(", but is suggested to be ");
             Console.Write("between ");
             Console.Write(-Constants.r_max);
@@ -130,10 +130,10 @@ public class InputParameters {
             Console.Write(" (r_max)");
             Console.WriteLine(".");
         }
-        if (!(-Constants.r_max <= y_2^0 && y_2^0 <= Constants.r_max)) {
+        if (!(-Constants.r_max <= y_2_0 && y_2_0 <= Constants.r_max)) {
             Console.Write("Warning: ");
-            Console.Write("y_2^0 has value ");
-            Console.Write(y_2^0);
+            Console.Write("y_2_0 has value ");
+            Console.Write(y_2_0);
             Console.Write(", but is suggested to be ");
             Console.Write("between ");
             Console.Write(-Constants.r_max);
@@ -143,10 +143,10 @@ public class InputParameters {
             Console.Write(" (r_max)");
             Console.WriteLine(".");
         }
-        if (!(-Constants.v_max <= v_x1^0 && v_x1^0 <= Constants.v_max)) {
+        if (!(-Constants.v_max <= v_x1_0 && v_x1_0 <= Constants.v_max)) {
             Console.Write("Warning: ");
-            Console.Write("v_x1^0 has value ");
-            Console.Write(v_x1^0);
+            Console.Write("v_x1_0 has value ");
+            Console.Write(v_x1_0);
             Console.Write(", but is suggested to be ");
             Console.Write("between ");
             Console.Write(-Constants.v_max);
@@ -156,10 +156,10 @@ public class InputParameters {
             Console.Write(" (v_max)");
             Console.WriteLine(".");
         }
-        if (!(-Constants.v_max <= v_y1^0 && v_y1^0 <= Constants.v_max)) {
+        if (!(-Constants.v_max <= v_y1_0 && v_y1_0 <= Constants.v_max)) {
             Console.Write("Warning: ");
-            Console.Write("v_y1^0 has value ");
-            Console.Write(v_y1^0);
+            Console.Write("v_y1_0 has value ");
+            Console.Write(v_y1_0);
             Console.Write(", but is suggested to be ");
             Console.Write("between ");
             Console.Write(-Constants.v_max);
@@ -169,10 +169,10 @@ public class InputParameters {
             Console.Write(" (v_max)");
             Console.WriteLine(".");
         }
-        if (!(-Constants.v_max <= v_x2^0 && v_x2^0 <= Constants.v_max)) {
+        if (!(-Constants.v_max <= v_x2_0 && v_x2_0 <= Constants.v_max)) {
             Console.Write("Warning: ");
-            Console.Write("v_x2^0 has value ");
-            Console.Write(v_x2^0);
+            Console.Write("v_x2_0 has value ");
+            Console.Write(v_x2_0);
             Console.Write(", but is suggested to be ");
             Console.Write("between ");
             Console.Write(-Constants.v_max);
@@ -182,10 +182,10 @@ public class InputParameters {
             Console.Write(" (v_max)");
             Console.WriteLine(".");
         }
-        if (!(-Constants.v_max <= v_y2^0 && v_y2^0 <= Constants.v_max)) {
+        if (!(-Constants.v_max <= v_y2_0 && v_y2_0 <= Constants.v_max)) {
             Console.Write("Warning: ");
-            Console.Write("v_y2^0 has value ");
-            Console.Write(v_y2^0);
+            Console.Write("v_y2_0 has value ");
+            Console.Write(v_y2_0);
             Console.Write(", but is suggested to be ");
             Console.Write("between ");
             Console.Write(-Constants.v_max);

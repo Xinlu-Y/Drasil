@@ -13,19 +13,19 @@ public class Calculations {
     /** \brief Calculates dependent variables (m)
         \param m_2 mass of the second star (kg)
         \param m_1 mass of the first star (kg)
-        \param x_1^0 initial x-position of the first star (m)
-        \param y_1^0 initial y-position of the first star (m)
-        \param x_2^0 initial x-position of the second star (m)
-        \param y_2^0 initial y-position of the second star (m)
-        \param v_x1^0 initial x-velocity of the first star (m/s)
-        \param v_y1^0 initial y-velocity of the first star (m/s)
-        \param v_x2^0 initial x-velocity of the second star (m/s)
-        \param v_y2^0 initial y-velocity of the second star (m/s)
+        \param x_1_0 initial x-position of the first star (m)
+        \param y_1_0 initial y-position of the first star (m)
+        \param x_2_0 initial x-position of the second star (m)
+        \param y_2_0 initial y-position of the second star (m)
+        \param v_x1_0 initial x-velocity of the first star (m/s)
+        \param v_y1_0 initial y-velocity of the first star (m/s)
+        \param v_x2_0 initial x-velocity of the second star (m/s)
+        \param v_y2_0 initial y-velocity of the second star (m/s)
         \param t_final final time (s)
         \return dependent variables (m)
     */
-    public static List<double> func_q(double m_2, double m_1, double x_1^0, double y_1^0, double x_2^0, double y_2^0, double v_x1^0, double v_y1^0, double v_x2^0, double v_y2^0, double t_final) {
-        List<double> q;
+    public static List<List<double>> func_q(double m_2, double m_1, double x_1_0, double y_1_0, double x_2_0, double y_2_0, double v_x1_0, double v_y1_0, double v_x2_0, double v_y2_0, double t_final) {
+        List<List<double>> q;
         Func<double, Vector, Vector> f = (t, q_vec) => {
             return new Vector(q_vec[4], q_vec[5], q_vec[6], q_vec[7], -6.6743e-11 * m_2 * (q_vec[0] - q_vec[2]) / Math.Pow(Math.Sqrt(Math.Pow(q_vec[0] - q_vec[2], 2.0) + Math.Pow(q_vec[1] - q_vec[3], 2.0)), 3.0), -6.6743e-11 * m_2 * (q_vec[1] - q_vec[3]) / Math.Pow(Math.Sqrt(Math.Pow(q_vec[0] - q_vec[2], 2.0) + Math.Pow(q_vec[1] - q_vec[3], 2.0)), 3.0), 6.6743e-11 * m_1 * (q_vec[0] - q_vec[2]) / Math.Pow(Math.Sqrt(Math.Pow(q_vec[0] - q_vec[2], 2.0) + Math.Pow(q_vec[1] - q_vec[3], 2.0)), 3.0), 6.6743e-11 * m_1 * (q_vec[1] - q_vec[3]) / Math.Pow(Math.Sqrt(Math.Pow(q_vec[0] - q_vec[2], 2.0) + Math.Pow(q_vec[1] - q_vec[3], 2.0)), 3.0));
         };
@@ -33,12 +33,12 @@ public class Calculations {
         opts.AbsoluteTolerance = 1.0e-8;
         opts.RelativeTolerance = 1.0e-8;
         
-        Vector initv = new Vector(new double[] {x_1^0, y_1^0, x_2^0, y_2^0, v_x1^0, v_y1^0, v_x2^0, v_y2^0});
+        Vector initv = new Vector(new double[] {x_1_0, y_1_0, x_2_0, y_2_0, v_x1_0, v_y1_0, v_x2_0, v_y2_0});
         IEnumerable<SolPoint> sol = Ode.RK547M(0.0, initv, f, opts);
         IEnumerable<SolPoint> points = sol.SolveFromToStep(0.0, t_final, 10.0);
-        q = new List<double> {};
+        q = new List<List<double>> {};
         foreach (SolPoint sp in points) {
-            q.Add(sp.X[0]);
+            q.Add(sp.X);
         }
         
         return q;

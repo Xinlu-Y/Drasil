@@ -13,7 +13,7 @@ public class OutputFormat {
     /** \brief Writes the output values to output.txt
         \param q dependent variables (m)
     */
-    public static void write_output(List<double> q) {
+    public static void write_output(List<List<double>> q) {
         StreamWriter outputfile;
         outputfile = new StreamWriter("output.txt", false);
         outputfile.Write("q = ");

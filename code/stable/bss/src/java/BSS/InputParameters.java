@@ -30,14 +30,14 @@ public class InputParameters {
     public static Object[] get_input(String filename) throws FileNotFoundException {
         double m_1;
         double m_2;
-        double x_1^0;
-        double y_1^0;
-        double x_2^0;
-        double y_2^0;
-        double v_x1^0;
-        double v_y1^0;
-        double v_x2^0;
-        double v_y2^0;
+        double x_1_0;
+        double y_1_0;
+        double x_2_0;
+        double y_2_0;
+        double v_x1_0;
+        double v_y1_0;
+        double v_x2_0;
+        double v_y2_0;
         double t_final;
         
         Scanner infile;
@@ -47,21 +47,21 @@ public class InputParameters {
         infile.nextLine();
         m_2 = Double.parseDouble(infile.nextLine());
         infile.nextLine();
-        x_1^0 = Double.parseDouble(infile.nextLine());
+        x_1_0 = Double.parseDouble(infile.nextLine());
         infile.nextLine();
-        y_1^0 = Double.parseDouble(infile.nextLine());
+        y_1_0 = Double.parseDouble(infile.nextLine());
         infile.nextLine();
-        x_2^0 = Double.parseDouble(infile.nextLine());
+        x_2_0 = Double.parseDouble(infile.nextLine());
         infile.nextLine();
-        y_2^0 = Double.parseDouble(infile.nextLine());
+        y_2_0 = Double.parseDouble(infile.nextLine());
         infile.nextLine();
-        v_x1^0 = Double.parseDouble(infile.nextLine());
+        v_x1_0 = Double.parseDouble(infile.nextLine());
         infile.nextLine();
-        v_y1^0 = Double.parseDouble(infile.nextLine());
+        v_y1_0 = Double.parseDouble(infile.nextLine());
         infile.nextLine();
-        v_x2^0 = Double.parseDouble(infile.nextLine());
+        v_x2_0 = Double.parseDouble(infile.nextLine());
         infile.nextLine();
-        v_y2^0 = Double.parseDouble(infile.nextLine());
+        v_y2_0 = Double.parseDouble(infile.nextLine());
         infile.nextLine();
         t_final = Double.parseDouble(infile.nextLine());
         infile.close();
@@ -69,14 +69,14 @@ public class InputParameters {
         Object[] outputs = new Object[11];
         outputs[0] = m_1;
         outputs[1] = m_2;
-        outputs[2] = x_1^0;
-        outputs[3] = y_1^0;
-        outputs[4] = x_2^0;
-        outputs[5] = y_2^0;
-        outputs[6] = v_x1^0;
-        outputs[7] = v_y1^0;
-        outputs[8] = v_x2^0;
-        outputs[9] = v_y2^0;
+        outputs[2] = x_1_0;
+        outputs[3] = y_1_0;
+        outputs[4] = x_2_0;
+        outputs[5] = y_2_0;
+        outputs[6] = v_x1_0;
+        outputs[7] = v_y1_0;
+        outputs[8] = v_x2_0;
+        outputs[9] = v_y2_0;
         outputs[10] = t_final;
         return outputs;
     }
@@ -84,17 +84,17 @@ public class InputParameters {
     /** \brief Verifies that input values satisfy the physical constraints and software constraints
         \param m_1 mass of the first star (kg)
         \param m_2 mass of the second star (kg)
-        \param x_1^0 initial x-position of the first star (m)
-        \param y_1^0 initial y-position of the first star (m)
-        \param x_2^0 initial x-position of the second star (m)
-        \param y_2^0 initial y-position of the second star (m)
-        \param v_x1^0 initial x-velocity of the first star (m/s)
-        \param v_y1^0 initial y-velocity of the first star (m/s)
-        \param v_x2^0 initial x-velocity of the second star (m/s)
-        \param v_y2^0 initial y-velocity of the second star (m/s)
+        \param x_1_0 initial x-position of the first star (m)
+        \param y_1_0 initial y-position of the first star (m)
+        \param x_2_0 initial x-position of the second star (m)
+        \param y_2_0 initial y-position of the second star (m)
+        \param v_x1_0 initial x-velocity of the first star (m/s)
+        \param v_y1_0 initial y-velocity of the first star (m/s)
+        \param v_x2_0 initial x-velocity of the second star (m/s)
+        \param v_y2_0 initial y-velocity of the second star (m/s)
         \param t_final final time (s)
     */
-    public static void input_constraints(double m_1, double m_2, double x_1^0, double y_1^0, double x_2^0, double y_2^0, double v_x1^0, double v_y1^0, double v_x2^0, double v_y2^0, double t_final) {
+    public static void input_constraints(double m_1, double m_2, double x_1_0, double y_1_0, double x_2_0, double y_2_0, double v_x1_0, double v_y1_0, double v_x2_0, double v_y2_0, double t_final) {
         if (!(Constants.m_min <= m_1 && m_1 <= Constants.m_max)) {
             System.out.print("Warning: ");
             System.out.print("m_1 has value ");
@@ -121,10 +121,10 @@ public class InputParameters {
             System.out.print(" (m_max)");
             System.out.println(".");
         }
-        if (!(-Constants.r_max <= x_1^0 && x_1^0 <= Constants.r_max)) {
+        if (!(-Constants.r_max <= x_1_0 && x_1_0 <= Constants.r_max)) {
             System.out.print("Warning: ");
-            System.out.print("x_1^0 has value ");
-            System.out.print(x_1^0);
+            System.out.print("x_1_0 has value ");
+            System.out.print(x_1_0);
             System.out.print(", but is suggested to be ");
             System.out.print("between ");
             System.out.print(-Constants.r_max);
@@ -134,10 +134,10 @@ public class InputParameters {
             System.out.print(" (r_max)");
             System.out.println(".");
         }
-        if (!(-Constants.r_max <= y_1^0 && y_1^0 <= Constants.r_max)) {
+        if (!(-Constants.r_max <= y_1_0 && y_1_0 <= Constants.r_max)) {
             System.out.print("Warning: ");
-            System.out.print("y_1^0 has value ");
-            System.out.print(y_1^0);
+            System.out.print("y_1_0 has value ");
+            System.out.print(y_1_0);
             System.out.print(", but is suggested to be ");
             System.out.print("between ");
             System.out.print(-Constants.r_max);
@@ -147,10 +147,10 @@ public class InputParameters {
             System.out.print(" (r_max)");
             System.out.println(".");
         }
-        if (!(-Constants.r_max <= x_2^0 && x_2^0 <= Constants.r_max)) {
+        if (!(-Constants.r_max <= x_2_0 && x_2_0 <= Constants.r_max)) {
             System.out.print("Warning: ");
-            System.out.print("x_2^0 has value ");
-            System.out.print(x_2^0);
+            System.out.print("x_2_0 has value ");
+            System.out.print(x_2_0);
             System.out.print(", but is suggested to be ");
             System.out.print("between ");
             System.out.print(-Constants.r_max);
@@ -160,10 +160,10 @@ public class InputParameters {
             System.out.print(" (r_max)");
             System.out.println(".");
         }
-        if (!(-Constants.r_max <= y_2^0 && y_2^0 <= Constants.r_max)) {
+        if (!(-Constants.r_max <= y_2_0 && y_2_0 <= Constants.r_max)) {
             System.out.print("Warning: ");
-            System.out.print("y_2^0 has value ");
-            System.out.print(y_2^0);
+            System.out.print("y_2_0 has value ");
+            System.out.print(y_2_0);
             System.out.print(", but is suggested to be ");
             System.out.print("between ");
             System.out.print(-Constants.r_max);
@@ -173,10 +173,10 @@ public class InputParameters {
             System.out.print(" (r_max)");
             System.out.println(".");
         }
-        if (!(-Constants.v_max <= v_x1^0 && v_x1^0 <= Constants.v_max)) {
+        if (!(-Constants.v_max <= v_x1_0 && v_x1_0 <= Constants.v_max)) {
             System.out.print("Warning: ");
-            System.out.print("v_x1^0 has value ");
-            System.out.print(v_x1^0);
+            System.out.print("v_x1_0 has value ");
+            System.out.print(v_x1_0);
             System.out.print(", but is suggested to be ");
             System.out.print("between ");
             System.out.print(-Constants.v_max);
@@ -186,10 +186,10 @@ public class InputParameters {
             System.out.print(" (v_max)");
             System.out.println(".");
         }
-        if (!(-Constants.v_max <= v_y1^0 && v_y1^0 <= Constants.v_max)) {
+        if (!(-Constants.v_max <= v_y1_0 && v_y1_0 <= Constants.v_max)) {
             System.out.print("Warning: ");
-            System.out.print("v_y1^0 has value ");
-            System.out.print(v_y1^0);
+            System.out.print("v_y1_0 has value ");
+            System.out.print(v_y1_0);
             System.out.print(", but is suggested to be ");
             System.out.print("between ");
             System.out.print(-Constants.v_max);
@@ -199,10 +199,10 @@ public class InputParameters {
             System.out.print(" (v_max)");
             System.out.println(".");
         }
-        if (!(-Constants.v_max <= v_x2^0 && v_x2^0 <= Constants.v_max)) {
+        if (!(-Constants.v_max <= v_x2_0 && v_x2_0 <= Constants.v_max)) {
             System.out.print("Warning: ");
-            System.out.print("v_x2^0 has value ");
-            System.out.print(v_x2^0);
+            System.out.print("v_x2_0 has value ");
+            System.out.print(v_x2_0);
             System.out.print(", but is suggested to be ");
             System.out.print("between ");
             System.out.print(-Constants.v_max);
@@ -212,10 +212,10 @@ public class InputParameters {
             System.out.print(" (v_max)");
             System.out.println(".");
         }
-        if (!(-Constants.v_max <= v_y2^0 && v_y2^0 <= Constants.v_max)) {
+        if (!(-Constants.v_max <= v_y2_0 && v_y2_0 <= Constants.v_max)) {
             System.out.print("Warning: ");
-            System.out.print("v_y2^0 has value ");
-            System.out.print(v_y2^0);
+            System.out.print("v_y2_0 has value ");
+            System.out.print(v_y2_0);
             System.out.print(", but is suggested to be ");
             System.out.print("between ");
             System.out.print(-Constants.v_max);

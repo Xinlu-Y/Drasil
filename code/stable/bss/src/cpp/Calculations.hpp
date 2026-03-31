@@ -17,17 +17,17 @@ using std::vector;
 /** \brief Calculates dependent variables (m)
     \param m_2 mass of the second star (kg)
     \param m_1 mass of the first star (kg)
-    \param x_1^0 initial x-position of the first star (m)
-    \param y_1^0 initial y-position of the first star (m)
-    \param x_2^0 initial x-position of the second star (m)
-    \param y_2^0 initial y-position of the second star (m)
-    \param v_x1^0 initial x-velocity of the first star (m/s)
-    \param v_y1^0 initial y-velocity of the first star (m/s)
-    \param v_x2^0 initial x-velocity of the second star (m/s)
-    \param v_y2^0 initial y-velocity of the second star (m/s)
+    \param x_1_0 initial x-position of the first star (m)
+    \param y_1_0 initial y-position of the first star (m)
+    \param x_2_0 initial x-position of the second star (m)
+    \param y_2_0 initial y-position of the second star (m)
+    \param v_x1_0 initial x-velocity of the first star (m/s)
+    \param v_y1_0 initial y-velocity of the first star (m/s)
+    \param v_x2_0 initial x-velocity of the second star (m/s)
+    \param v_y2_0 initial y-velocity of the second star (m/s)
     \param t_final final time (s)
     \return dependent variables (m)
 */
-vector<double> func_q(double m_2, double m_1, double x_1^0, double y_1^0, double x_2^0, double y_2^0, double v_x1^0, double v_y1^0, double v_x2^0, double v_y2^0, double t_final);
+vector<vector<double>> func_q(double m_2, double m_1, double x_1_0, double y_1_0, double x_2_0, double y_2_0, double v_x1_0, double v_y1_0, double v_x2_0, double v_y2_0, double t_final);
 
 #endif

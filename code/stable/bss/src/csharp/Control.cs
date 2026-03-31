@@ -15,18 +15,18 @@ public class Control {
         string filename = args[0];
         double m_1;
         double m_2;
-        double x_1^0;
-        double y_1^0;
-        double x_2^0;
-        double y_2^0;
-        double v_x1^0;
-        double v_y1^0;
-        double v_x2^0;
-        double v_y2^0;
+        double x_1_0;
+        double y_1_0;
+        double x_2_0;
+        double y_2_0;
+        double v_x1_0;
+        double v_y1_0;
+        double v_x2_0;
+        double v_y2_0;
         double t_final;
-        InputParameters.get_input(filename, out m_1, out m_2, out x_1^0, out y_1^0, out x_2^0, out y_2^0, out v_x1^0, out v_y1^0, out v_x2^0, out v_y2^0, out t_final);
-        InputParameters.input_constraints(m_1, m_2, x_1^0, y_1^0, x_2^0, y_2^0, v_x1^0, v_y1^0, v_x2^0, v_y2^0, t_final);
-        List<double> q = Calculations.func_q(m_2, m_1, x_1^0, y_1^0, x_2^0, y_2^0, v_x1^0, v_y1^0, v_x2^0, v_y2^0, t_final);
+        InputParameters.get_input(filename, out m_1, out m_2, out x_1_0, out y_1_0, out x_2_0, out y_2_0, out v_x1_0, out v_y1_0, out v_x2_0, out v_y2_0, out t_final);
+        InputParameters.input_constraints(m_1, m_2, x_1_0, y_1_0, x_2_0, y_2_0, v_x1_0, v_y1_0, v_x2_0, v_y2_0, t_final);
+        List<List<double>> q = Calculations.func_q(m_2, m_1, x_1_0, y_1_0, x_2_0, y_2_0, v_x1_0, v_y1_0, v_x2_0, v_y2_0, t_final);
         OutputFormat.write_output(q);
     }
 }

@@ -17,6 +17,6 @@ using std::vector;
 /** \brief Writes the output values to output.txt
     \param q dependent variables (m)
 */
-void write_output(vector<double> &q);
+void write_output(vector<vector<double>> &q);
 
 #endif

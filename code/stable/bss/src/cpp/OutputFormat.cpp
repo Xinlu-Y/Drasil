@@ -9,7 +9,7 @@ using std::ofstream;
 using std::string;
 using std::vector;
 
-void write_output(vector<double> &q) {
+void write_output(vector<vector<double>> &q) {
     ofstream outputfile;
     outputfile.open("output.txt", std::fstream::out);
     outputfile << "q = ";

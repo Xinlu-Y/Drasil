@@ -30,6 +30,6 @@ def func_q(m_2, m_1, x_1_0, y_1_0, x_2_0, y_2_0, v_x1_0, v_y1_0, v_x2_0, v_y2_0,
     q = [[x_1_0, y_1_0, x_2_0, y_2_0, v_x1_0, v_y1_0, v_x2_0, v_y2_0]]
     while r.successful() and r.t < t_final:
         r.integrate(r.t + 10.0)
-        q.append(r.y)
+        q.append(r.y.tolist())
     
     return q

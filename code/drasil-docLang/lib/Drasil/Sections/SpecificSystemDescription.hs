@@ -268,9 +268,8 @@ inDataConstTbl qlst = mkDataConstraintTable (baseCols ++ rationaleCols ++ uncert
                 (S "Typical Value", map (\q -> fmtU (eS $ express $ getRVal q) q) sorted)]
     uncertCols = [(short typUnc, map (\q -> typUncr (uncVal q, uncPrec q)) sorted)]
     hasAnyRationale = any (\q -> isJust (q ^. rationale)) sorted
-    rationaleCols = if hasAnyRationale
-      then [(S "Rationale", map (\q -> fromMaybe EmptyS (q ^. rationale)) sorted)]
-      else []
+    rationaleCols = [(S "Rationale", map (\q -> fromMaybe EmptyS (q ^. rationale)) sorted) |
+      hasAnyRationale]
 
 -- | Creates the output Data Constraints Table.
 outDataConstTbl :: (Quantity c, Constrained c) => [c] -> LabelledContent

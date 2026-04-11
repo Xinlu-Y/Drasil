@@ -16,6 +16,7 @@ digraph allvsall {
 	"theory:accelIMX1" -> "instance:planar";
 	"theory:accelIMX1" -> "instance:nonzeroSeparation";
 	"theory:accelIMX1" -> "theory:centerOfMassCS";
+	"theory:accelIMX1" -> "theory:newtonSL";
 	"theory:accelIMX1" -> "theory:velocityTM";
 	"theory:accelIMX1" -> "theory:accelerationTM";
 	"theory:accelIMX1" -> "theory:force";
@@ -30,6 +31,7 @@ digraph allvsall {
 	"theory:accelIMY1" -> "instance:planar";
 	"theory:accelIMY1" -> "instance:nonzeroSeparation";
 	"theory:accelIMY1" -> "theory:centerOfMassCS";
+	"theory:accelIMY1" -> "theory:newtonSL";
 	"theory:accelIMY1" -> "theory:velocityTM";
 	"theory:accelIMY1" -> "theory:accelerationTM";
 	"theory:accelIMY1" -> "theory:force";
@@ -44,6 +46,7 @@ digraph allvsall {
 	"theory:accelIMX2" -> "instance:planar";
 	"theory:accelIMX2" -> "instance:nonzeroSeparation";
 	"theory:accelIMX2" -> "theory:centerOfMassCS";
+	"theory:accelIMX2" -> "theory:newtonSL";
 	"theory:accelIMX2" -> "theory:velocityTM";
 	"theory:accelIMX2" -> "theory:accelerationTM";
 	"theory:accelIMX2" -> "theory:force";
@@ -58,6 +61,7 @@ digraph allvsall {
 	"theory:accelIMY2" -> "instance:planar";
 	"theory:accelIMY2" -> "instance:nonzeroSeparation";
 	"theory:accelIMY2" -> "theory:centerOfMassCS";
+	"theory:accelIMY2" -> "theory:newtonSL";
 	"theory:accelIMY2" -> "theory:velocityTM";
 	"theory:accelIMY2" -> "theory:accelerationTM";
 	"theory:accelIMY2" -> "theory:force";

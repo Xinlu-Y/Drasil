@@ -1,20 +1,24 @@
 digraph refvsref {
 	"theory:accelIMX1" -> "theory:centerOfMassCS";
+	"theory:accelIMX1" -> "theory:newtonSL";
 	"theory:accelIMX1" -> "theory:velocityTM";
 	"theory:accelIMX1" -> "theory:accelerationTM";
 	"theory:accelIMX1" -> "theory:force";
 	"theory:accelIMX1" -> "theory:r_12";
 	"theory:accelIMY1" -> "theory:centerOfMassCS";
+	"theory:accelIMY1" -> "theory:newtonSL";
 	"theory:accelIMY1" -> "theory:velocityTM";
 	"theory:accelIMY1" -> "theory:accelerationTM";
 	"theory:accelIMY1" -> "theory:force";
 	"theory:accelIMY1" -> "theory:r_12";
 	"theory:accelIMX2" -> "theory:centerOfMassCS";
+	"theory:accelIMX2" -> "theory:newtonSL";
 	"theory:accelIMX2" -> "theory:velocityTM";
 	"theory:accelIMX2" -> "theory:accelerationTM";
 	"theory:accelIMX2" -> "theory:force";
 	"theory:accelIMX2" -> "theory:r_12";
 	"theory:accelIMY2" -> "theory:centerOfMassCS";
+	"theory:accelIMY2" -> "theory:newtonSL";
 	"theory:accelIMY2" -> "theory:velocityTM";
 	"theory:accelIMY2" -> "theory:accelerationTM";
 	"theory:accelIMY2" -> "theory:force";

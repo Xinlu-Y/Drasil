@@ -81,6 +81,8 @@ $E$ & Energy & ${\text{J}}$
 \\
 $\symbf{F}$ & Force & ${\text{N}}$
 \\
+${\symbf{F}_{\symbf{g}}}$ & Force of gravity & ${\text{N}}$
+\\
 $G$ & Gravitational constant & $\frac{\text{m}^{3}}{\text{kg}\text{s}^{2}}$
 \\
 $i$ & Index & --
@@ -471,18 +473,18 @@ Label & Newton's law of universal gravitation
         
 \\ \midrule
 Equation & \begin{displaymath}
-           \resizeExpression{\symbf{F}=-G\,\frac{{m_{1}}\,{m_{2}}}{{r_{12}}^{2}}}
+           \resizeExpression{{\symbf{F}_{\symbf{g}}}=G\,\frac{{m_{1}}\,{m_{2}}}{{r_{12}}^{2}}}
            \end{displaymath}
 \\ \midrule
 Description & \begin{symbDescription}
-              \item{$\symbf{F}$ is the force (${\text{N}}$)}
+              \item{${\symbf{F}_{\symbf{g}}}$ is the force of gravity (${\text{N}}$)}
               \item{$G$ is the gravitational constant ($\frac{\text{m}^{3}}{\text{kg}\text{s}^{2}}$)}
               \item{${m_{1}}$ is the mass of the first star (${\text{kg}}$)}
               \item{${m_{2}}$ is the mass of the second star (${\text{kg}}$)}
               \item{${r_{12}}$ is the separation distance (${\text{m}}$)}
               \end{symbDescription}
 \\ \midrule
-Notes & The gravitational force between two bodies is proportional to the product of their masses and inversely proportional to the square of the distance between them. This assumes Newtonian gravitation (\hyperref[newtonianGravity]{A:newtonianGravity}) and requires the separation distance to be positive (\hyperref[nonzeroSeparation]{A:nonzeroSeparation}).
+Notes & ${\symbf{F}_{\symbf{g}}}$ is the magnitude of the gravitational force between two bodies; it is proportional to the product of their masses and inversely proportional to the square of the distance between them. The force acts along the relative-position vector (\hyperref[TM:relPosAndSep]{TM:relPosAndSep}), directed from one body toward the other. This assumes Newtonian gravitation (\hyperref[newtonianGravity]{A:newtonianGravity}) and requires the separation distance to be positive (\hyperref[nonzeroSeparation]{A:nonzeroSeparation}).
         
 \\ \midrule
 Source & --
@@ -523,7 +525,7 @@ Notes & The relative position vector is defined as the difference of the two sta
 Source & --
          
 \\ \midrule
-RefBy & \hyperref[IM:accelY2]{IM:accelY2}, \hyperref[IM:accelY1]{IM:accelY1}, \hyperref[IM:accelX2]{IM:accelX2}, and \hyperref[IM:accelX1]{IM:accelX1}
+RefBy & \hyperref[TM:UniversalGravLaw]{TM:UniversalGravLaw}, \hyperref[IM:accelY2]{IM:accelY2}, \hyperref[IM:accelY1]{IM:accelY1}, \hyperref[IM:accelX2]{IM:accelX2}, and \hyperref[IM:accelX1]{IM:accelX1}
         
 \\ \bottomrule
 \end{tabular}
@@ -948,7 +950,7 @@ The purpose of the traceability matrices is to provide easy references on what h
 \\
 \hyperref[TM:acceleration]{TM:acceleration} &  &  &  &  &  &  &  &  &  & 
 \\
-\hyperref[TM:UniversalGravLaw]{TM:UniversalGravLaw} &  &  &  &  &  &  &  &  &  & 
+\hyperref[TM:UniversalGravLaw]{TM:UniversalGravLaw} &  &  &  &  &  & X &  &  &  & 
 \\
 \hyperref[TM:relPosAndSep]{TM:relPosAndSep} &  &  &  &  &  &  &  &  &  & 
 \\

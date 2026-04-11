@@ -30,7 +30,7 @@ This section focuses on the general equations and laws that BSS is based on.
 |Description|<ul><li>\\(\boldsymbol{F}\\) is the force (\\({\text{N}}\\))</li><li>\\(m\\) is the mass (\\({\text{kg}}\\))</li><li>\\(\boldsymbol{a}\text{(}t\text{)}\\) is the acceleration (\\(\frac{\text{m}}{\text{s}^{2}}\\))</li></ul>      |
 |Notes      |<ul><li>The net force \\(\boldsymbol{F}\\) on a body is proportional to the acceleration \\(\boldsymbol{a}\text{(}t\text{)}\\) of the body, where \\(m\\) denotes the mass of the body as the constant of proportionality.</li></ul>|
 |Source     |[hibbeler2004](./SecReferences.md#hibbeler2004)                                                                                                                                                                                     |
-|RefBy      |                                                                                                                                                                                                                                    |
+|RefBy      |[IM:accelY2](./SecIMs.md#IM:accelY2), [IM:accelY1](./SecIMs.md#IM:accelY1), [IM:accelX2](./SecIMs.md#IM:accelX2), and [IM:accelX1](./SecIMs.md#IM:accelX1)                                                                          |
 
 <div align="center">
 

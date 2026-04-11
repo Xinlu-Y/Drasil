@@ -253,7 +253,7 @@ This section first presents the problem description, which gives a high-level vi
 
 \subsection{Problem Description}
 \label{Sec:ProbDesc}
-A system is needed to BSS is intended to simulate the motion of a binary star system under mutual gravitational interaction.
+A system is needed to simulate the motion of a binary star system under mutual gravitational interaction.
 
 \subsubsection{Terminology and Definitions}
 \label{Sec:TermDefs}
@@ -846,14 +846,14 @@ This section provides the non-functional requirements, the qualities that the so
 \end{description}
 \section{Likely Changes}
 \label{Sec:LCs}
-This section lists the likely changes to be made to the software.
+This section lists the likely changes (LC) to be made to the software.
 
 \begin{description}[font=\normalfont]
 \item[Derived-Output-Quantities:\phantomsection\label{lcDerivedOutputs}]{Additional derived outputs, such as total energy or angular momentum, may be added to support validation and analysis of the simulation results. This change could affect results derived under all current assumptions: \hyperref[twoBody]{A:twoBody}, \hyperref[isolated]{A:isolated}, \hyperref[newtonianGravity]{A:newtonianGravity}, \hyperref[nonRelativistic]{A:nonRelativistic}, \hyperref[pointMass]{A:pointMass}, \hyperref[constantMass]{A:constantMass}, \hyperref[inertialFrame]{A:inertialFrame}, \hyperref[planar]{A:planar} and \hyperref[nonzeroSeparation]{A:nonzeroSeparation}.}
 \end{description}
 \section{Unlikely Changes}
 \label{Sec:UCs}
-This section lists the unlikely changes to be made to the software.
+This section lists the unlikely changes (UC) to be made to the software.
 
 \begin{description}[font=\normalfont]
 \item[Newtonian-Gravity-Model:\phantomsection\label{ucNewtonianGravity}]{The gravitational interaction model (\hyperref[newtonianGravity]{A:newtonianGravity}) is unlikely to change, since BSS is specifically designed for Newtonian two-body dynamics.}

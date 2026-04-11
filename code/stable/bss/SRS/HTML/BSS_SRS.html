@@ -567,7 +567,7 @@
           <div class="subsection">
             <h2>Problem Description</h2>
             <p class="paragraph">
-              A system is needed to <span title="Binary Star System Simulator">BSS</span> is intended to simulate the motion of a binary star system under mutual gravitational interaction.
+              A system is needed to simulate the motion of a binary star system under mutual gravitational interaction.
             </p>
             <div id="Sec:TermDefs">
               <div class="subsubsection">
@@ -660,47 +660,47 @@
                 <div class="list">
                   <p>
                     <div id="twoBody">
-                      twoBody: The system consists of exactly two stars with masses <em>m<sub>1</sub></em> and <em>m<sub>2</sub></em> . Third-body gravitational perturbations are ignored. (RefBy: <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
+                      twoBody: The system consists of exactly two stars with masses <em>m<sub>1</sub></em> and <em>m<sub>2</sub></em> . Third-body gravitational perturbations are ignored. (<span title="referenced by">RefBy</span>: <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
                     </div>
                   </p>
                   <p>
                     <div id="isolated">
-                      isolated: Non-gravitational forces (e.g., drag, thrust, radiation pressure) are neglected; the only interaction modeled is mutual Newtonian gravitation between the two stars (from <a href=#newtonianGravity>A:newtonianGravity</a>). (RefBy: <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
+                      isolated: Non-gravitational forces (e.g., drag, thrust, radiation pressure) are neglected; the only interaction modeled is mutual Newtonian gravitation between the two stars (from <a href=#newtonianGravity>A:newtonianGravity</a>). (<span title="referenced by">RefBy</span>: <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
                     </div>
                   </p>
                   <p>
                     <div id="newtonianGravity">
-                      newtonianGravity: The gravitational interaction between the stars is modeled using Newton's law of universal gravitation, with the gravitational constant <em>G</em> provided in <a href=#Sec:AuxConstants>Values of Auxiliary Constants</a>. (RefBy: <a href=#TM:UniversalGravLaw>TM:UniversalGravLaw</a>, <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, <a href=#ucNewtonianGravity>UC:Newtonian-Gravity-Model</a>, <a href=#nonzeroSeparation>A:nonzeroSeparation</a>, <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>, and <a href=#isolated>A:isolated</a>.)
+                      newtonianGravity: The gravitational interaction between the stars is modeled using Newton's law of universal gravitation, with the gravitational constant <em>G</em> provided in <a href=#Sec:AuxConstants>Values of Auxiliary Constants</a>. (<span title="referenced by">RefBy</span>: <a href=#TM:UniversalGravLaw>TM:UniversalGravLaw</a>, <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, <a href=#ucNewtonianGravity>UC:Newtonian-Gravity-Model</a>, <a href=#nonzeroSeparation>A:nonzeroSeparation</a>, <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>, and <a href=#isolated>A:isolated</a>.)
                     </div>
                   </p>
                   <p>
                     <div id="nonRelativistic">
-                      nonRelativistic: The motion is modeled using classical (non-relativistic) mechanics; relativistic effects are neglected. (RefBy: <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
+                      nonRelativistic: The motion is modeled using classical (non-relativistic) mechanics; relativistic effects are neglected. (<span title="referenced by">RefBy</span>: <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
                     </div>
                   </p>
                   <p>
                     <div id="pointMass">
-                      pointMass: Each star (<em>m<sub>1</sub></em>, <em>m<sub>2</sub></em>) is modeled as a point mass, and effects due to stellar size, deformation, or rotation are neglected. (RefBy: <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, <a href=#nonzeroSeparation>A:nonzeroSeparation</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
+                      pointMass: Each star (<em>m<sub>1</sub></em>, <em>m<sub>2</sub></em>) is modeled as a point mass, and effects due to stellar size, deformation, or rotation are neglected. (<span title="referenced by">RefBy</span>: <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, <a href=#nonzeroSeparation>A:nonzeroSeparation</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
                     </div>
                   </p>
                   <p>
                     <div id="constantMass">
-                      constantMass: The masses <em>m<sub>1</sub></em> and <em>m<sub>2</sub></em> remain constant over time. (RefBy: <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
+                      constantMass: The masses <em>m<sub>1</sub></em> and <em>m<sub>2</sub></em> remain constant over time. (<span title="referenced by">RefBy</span>: <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
                     </div>
                   </p>
                   <p>
                     <div id="inertialFrame">
-                      inertialFrame: The simulation is performed in an inertial reference frame. (RefBy: <a href=#TM:centerOfMass>TM:centerOfMass</a>, <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
+                      inertialFrame: The simulation is performed in an inertial reference frame. (<span title="referenced by">RefBy</span>: <a href=#TM:centerOfMass>TM:centerOfMass</a>, <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
                     </div>
                   </p>
                   <p>
                     <div id="planar">
-                      planar: The motion of the binary star system is confined to a two-dimensional plane. (RefBy: <a href=#TM:relPosAndSep>TM:relPosAndSep</a>, <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
+                      planar: The motion of the binary star system is confined to a two-dimensional plane. (<span title="referenced by">RefBy</span>: <a href=#TM:relPosAndSep>TM:relPosAndSep</a>, <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
                     </div>
                   </p>
                   <p>
                     <div id="nonzeroSeparation">
-                      nonzeroSeparation: Collisions are out of scope: the separation distance <em>r<sub>12</sub></em> is positive for all simulated times, so the gravitational force model remains well-defined (from <a href=#newtonianGravity>A:newtonianGravity</a> and <a href=#pointMass>A:pointMass</a>). (RefBy: <a href=#TM:UniversalGravLaw>TM:UniversalGravLaw</a>, <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
+                      nonzeroSeparation: Collisions are out of scope: the separation distance <em>r<sub>12</sub></em> is positive for all simulated times, so the gravitational force model remains well-defined (from <a href=#newtonianGravity>A:newtonianGravity</a> and <a href=#pointMass>A:pointMass</a>). (<span title="referenced by">RefBy</span>: <a href=#TM:UniversalGravLaw>TM:UniversalGravLaw</a>, <a href=#IM:accelY2>IM:accelY2</a>, <a href=#IM:accelY1>IM:accelY1</a>, <a href=#IM:accelX2>IM:accelX2</a>, <a href=#IM:accelX1>IM:accelX1</a>, and <a href=#lcDerivedOutputs>LC:Derived-Output-Quantities</a>.)
                     </div>
                   </p>
                 </div>
@@ -1730,7 +1730,7 @@
       <div class="section">
         <h1>Likely Changes</h1>
         <p class="paragraph">
-          This section lists the likely changes to be made to the software.
+          This section lists the likely changes (<span title="likely change">LC</span>) to be made to the software.
         </p>
         <div class="list">
           <p>
@@ -1745,7 +1745,7 @@
       <div class="section">
         <h1>Unlikely Changes</h1>
         <p class="paragraph">
-          This section lists the unlikely changes to be made to the software.
+          This section lists the unlikely changes (<span title="unlikely change">UC</span>) to be made to the software.
         </p>
         <div class="list">
           <p>
